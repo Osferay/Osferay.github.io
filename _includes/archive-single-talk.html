@@ -26,7 +26,7 @@
       </div>
     {% endif %}
     <h4 class="archive__item-title" itemprop="headline">
-        <a href="{{ post.url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ post.link }}" rel="permalink">{{ title }}</a>
     </h4>
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
