@@ -27,7 +27,7 @@
     {% endif %}
 
     <h3 class="archive__item-title" itemprop="headline">
-        {{ title }}.
+        {{ title }}
     </h3>
     
     {% if post.read_time %}
@@ -35,7 +35,7 @@
     {% endif %}
 
         {% if post.coauthor %}
-          <p> With <b>{{post.coauthor}}</b>. </p>
+          <p> With <b>{{post.coauthor}}</b> </p>
         {% endif %}
     
         {% if post.collection == 'teaching' %}
