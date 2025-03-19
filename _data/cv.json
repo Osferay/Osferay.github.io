@@ -79,16 +79,16 @@
   "references": [],
   "publications": [
     {
-      "name": "The conjugacy problem and canonical representatives in finitely generated nilpotent groups",
-      "publisher": "Journal of Symbolic Computation. Vol 130",
-      "releaseDate": "2025-09-01",
-      "website": "https://doi.org/10.1016/j.jsc.2025.102422",
-      "coauthor": "Bettina Eick"
-    },
-    {
-      "name": "On the class-breadth conjecture for algebras and T-groups",
+      "name": "On the class-breadth conjecture for algebras and T-groups.",
       "publisher": "Submitted",
       "releaseDate": "2025-12-31",
+      "coauthor": "Bettina Eick."
+    },
+    {
+      "name": "The conjugacy problem and canonical representatives in finitely generated nilpotent groups.",
+      "publisher": "Journal of Symbolic Computation. Vol 130.",
+      "releaseDate": "2025-09-01",
+      "website": "https://doi.org/10.1016/j.jsc.2025.102422",
       "coauthor": "Bettina Eick"
     }
   ],
