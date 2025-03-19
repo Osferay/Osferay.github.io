@@ -1,7 +1,7 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Óscar Fernández Ayala",
+    "email": "oscar00ayala@gmail.com",
     "phone": "",
     "website": "https://academicpages.github.io",
     "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
@@ -33,120 +33,84 @@
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
+      "institution": "Technische Universität Braunschweig",
       "area": "Ph.D in Version Control Theory",
       "studyType": "",
       "startDate": "",
-      "endDate": "2018",
+      "endDate": "2027",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "Universidad Pública de Navarra",
+      "area": "Máster en Modelización e Investigación Matemática, Estadística y Computación",
       "studyType": "",
       "startDate": "",
-      "endDate": "2014",
+      "endDate": "",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
+      "institution": "Universidad de Alicante",
+      "area": "Grado en Matemáticas",
       "studyType": "",
       "startDate": "",
-      "endDate": "2012",
+      "endDate": "",
       "gpa": null,
       "courses": []
     }
   ],
   "skills": [],
-  "languages": [],
+  "languages": [ 
+    {
+      "language" : "Spanish",
+      "fluency"  : "Mother tongue"
+    },
+    {
+      "language" : "Catalan",
+      "fluency"  : "Mother tongue"
+    },
+    {
+      "language" : "English",
+      "fluency"  : "B2"
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "The conjugacy problem and canonical representatives in finitely generated nilpotent groups",
+      "publisher": "Journal of Symbolic Computation. Vol 130",
+      "releaseDate": "2025-09-01",
+      "website": "https://doi.org/10.1016/j.jsc.2025.102422",
+      "coauthor": "Bettina Eick"
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "On the class-breadth conjecture for algebras and T-groups",
+      "publisher": "Submitted",
+      "releaseDate": "2025-12-31",
+      "website": "",
+      "coauthor": "Bettina Eick"
     }
   ],
-  "presentations": [
+  "works": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "position": "Ingeniero de desarrollo en visión y procesado de la señal.",
+      "company": "AUTIS INGENIEROS",
+      "startDate": "2022-07-01",
+      "endDate": "2024-01-31"
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
+      "position": "Computer Vision Developer.",
+      "company": "HardSoftKoop",
+      "startDate": "2021-11-01",
+      "endDate": "2022-06-31"
     },
     {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "position": "Programming Internship",
+      "company": "Capgemini",
+      "startDate": "2021-06-01",
+      "endDate": "2021-09-31"
     }
   ]
 }
