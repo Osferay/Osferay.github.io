@@ -123,7 +123,6 @@
           <div class="cv-item-title">{{ publication.name }}</div>
           <div class="cv-item-date">{{ publication.releaseDate | slice: 0, 4 }}</div>
         </div>
-          {% if publication.coauthor %}
         <div class="cv-item-content">
           {% if publication.coauthor %}
           <div class="cv-item-detail">With {{ publication.coauthor }}</div>

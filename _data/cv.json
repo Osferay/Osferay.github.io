@@ -4,7 +4,7 @@
     "email": "oscar00ayala@gmail.com",
     "phone": "",
     "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "summary": "Currently employed at the Technische Universität Braunschweig.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -14,19 +14,19 @@
     },
     "profiles": [
       {
-        "network": "Google Scholar",
+        "network": "LinkedIn",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://www.linkedin.com/in/oscarfayala"
       },
       {
         "network": "ORCID",
         "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0009-0006-3075-5115"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "",
+        "url": "https://github.com/Osferay"
       }
     ]
   },
@@ -34,7 +34,7 @@
   "education": [
     {
       "institution": "Technische Universität Braunschweig",
-      "area": "Ph.D in Version Control Theory",
+      "area": "Promotion in Mathematik",
       "studyType": "",
       "startDate": "",
       "endDate": "2027",
