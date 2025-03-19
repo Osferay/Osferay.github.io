@@ -36,7 +36,7 @@
 
         {% if post.coauthor %}
           <p> With {{post.coauthor}} </p>
-        {% if post.collection == 'teaching' %}
+        {% elsif post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' and post.paperurl %}
           <p> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}, <a href=" {{ post.paperurl }} ">DOI</a> </p>
