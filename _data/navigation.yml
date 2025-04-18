@@ -11,6 +11,12 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Software"
+    url: /research/software/
+  
+  - title: "Publications"
+    url: /research/publications/
+
   - title: "Events"
     url: /events/    
 
