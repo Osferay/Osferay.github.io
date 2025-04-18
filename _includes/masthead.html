@@ -8,6 +8,16 @@
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
+            {% if link.title == "Research" %}
+            <!-- Dropdown for Research -->
+              <li class="masthead__menu-item masthead__menu-item--dropdown">
+                <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ base_path }}/research/software/">Research Software</a></li>
+                  <li><a href="{{ base_path }}/research/publications/">Research Publications</a></li>
+                </ul>
+              </li >
+          {% else %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
