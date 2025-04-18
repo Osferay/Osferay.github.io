@@ -9,7 +9,7 @@ author_profile: true
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-Here you can find my research interests and publications, including preprints or submitted articles.
+Here you can find my research interests, publications including preprints or submitted articles, and software.
 
 <h2> Research interests </h2>
 <ul>
@@ -41,4 +41,6 @@ Here you can find my research interests and publications, including preprints or
   {% endfor %}
 {% endif %}
 
-
+{% for post in site.software reversed %}
+  {% include archive-single-software.html %}
+{% endfor %}

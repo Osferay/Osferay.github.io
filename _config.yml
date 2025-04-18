@@ -27,7 +27,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : # "Short biography for the left-hand sidebar"
   location         : # "Earth"
-  employer         : "Technische Universität Braunschweig"
+  employer         : "TU Braunschweig"
   uri              : # URL
   email            : "oscar00ayala@gmail.com" 
 
@@ -225,6 +225,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  software:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -282,6 +285,15 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # software
+  - scope:
+      path: ""
+      type: software
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 
 # Sass/SCSS
