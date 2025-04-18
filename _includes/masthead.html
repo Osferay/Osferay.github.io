@@ -6,25 +6,29 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist">
+            <a href="{{ base_path }}/">{{ site.title }}</a>
+          </li>
           {% for link in site.data.navigation.main %}
             {% if link.title == "Research" %}
-            <!-- Dropdown for Research -->
+              <!-- Dropdown for Research -->
               <li class="masthead__menu-item masthead__menu-item--dropdown">
                 <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
                 <ul class="dropdown-menu">
-                  <li><a href="{{ base_path }}/research/software/">Research Software</a></li>
-                  <li><a href="{{ base_path }}/research/publications/">Research Publications</a></li>
+                  <li><a href="{{ base_path }}/research/publications/">Publications</a></li>
+                  <li><a href="{{ base_path }}/research/software/">Software</a></li>
                 </ul>
-              </li >
-          {% else %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
+              </li>
             {% else %}
-              {% assign domain = base_path %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li class="masthead__menu-item">
+                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              </li>
             {% endif %}
-          {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>

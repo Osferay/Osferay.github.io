@@ -321,55 +321,38 @@
 
 /* Dropdown Navigation for Research Link */
 .masthead__menu-item--dropdown {
-  position: relative; /* Necessary for the dropdown to position correctly */
+  position: relative; /* Necessary for dropdown positioning */
+}
 
-  .dropdown-menu {
-    display: none; /* Hide the dropdown by default */
-    position: absolute;
-    top: 100%; /* Position the dropdown below the Research link */
-    left: 0;
-    background: var(--global-bg-color);
-    border: 1px solid var(--global-border-color);
-    border-radius: $border-radius;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+.masthead__menu-item--dropdown .dropdown-menu {
+  display: none; /* Hide the dropdown by default */
+  position: absolute;
+  top: 100%; /* Position dropdown below the Research link */
+  left: 0;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
-    li {
-      padding: 10px 15px;
-      list-style-type: none;
-      
-      a {
-        color: var(--global-text-color-light);
-        text-decoration: none;
+.masthead__menu-item--dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown when hovering over the parent */
+}
 
-        &:hover {
-          color: var(--global-link-color-hover);
-          background-color: var(--global-border-color);
-        }
-      }
-    }
+.masthead__menu-item--dropdown .dropdown-menu li {
+  padding: 10px 15px;
+  list-style-type: none;
+}
 
-    /* Additional style to add a triangle pointer */
-    &:before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: 10px;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 10px solid var(--global-border-color);
-    }
-  }
+.masthead__menu-item--dropdown .dropdown-menu li a {
+  color: var(--global-text-color-light);
+  text-decoration: none;
+}
 
-  &:hover .dropdown-menu {
-    display: block; /* Show the dropdown when the parent item is hovered */
-  }
-
-  &:hover > a {
-    color: var(--global-masthead-link-color-hover); /* Change the color of the parent link when hovered */
-  }
+.masthead__menu-item--dropdown .dropdown-menu li a:hover {
+  color: var(--global-link-color-hover);
+  background-color: var(--global-border-color);
 }
 
 /*
