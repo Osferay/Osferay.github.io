@@ -42,6 +42,8 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  font-size: 1.5rem;
+  text-decoration: underline;
 
   a + a {
     opacity: 0.5;
@@ -77,10 +79,6 @@
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
-
-  .archive__item-title {
-    text-decoration: none;
   }
 }
 
