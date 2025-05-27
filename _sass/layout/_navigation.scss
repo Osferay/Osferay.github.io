@@ -357,6 +357,43 @@
   transform: scaleX(1);
 }
 
+/* Dropdown Navigation for talks Link */
+.masthead__menu-item--talks {
+  position: relative; /* Necessary for dropdown positioning */
+}
+
+.masthead__menu-item--talks .dropdown-menu {
+  display: none; /* Hide the dropdown by default */
+  position: absolute;
+  top: 100%; /* Position dropdown below the Research link */
+  left: 0;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.masthead__menu-item--talks:active .dropdown-menu {
+  display: block; /* Show dropdown when hovering over the parent */
+}
+
+.masthead__menu-item--talks .dropdown-menu li {
+  padding: 10px 15px;
+  margin: 0px;
+  font-weight: normal;
+  list-style-type: none;
+}
+
+.masthead__menu-item--talks .dropdown-menu li a {
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.masthead__menu-item--talks .dropdown-menu li a:hover {
+  transform: scaleX(1);
+}
+
 /*
    Navigation list
    ========================================================================== */
