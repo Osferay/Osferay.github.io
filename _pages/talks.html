@@ -11,6 +11,12 @@ author_profile: true
 
 <ul>
 {% for talk in sorted_talks %}
+  <li>{{ talk.title }} — raw: "{{ talk.date_start }}" — parsed: "{{ talk.date_start | date: "%Y" }}"</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for talk in sorted_talks %}
   {% assign talk_year = talk.date_start | date: "%Y" %}
   <li>Talk: {{ talk.title }} ({{ talk_year }})</li>
   {% assign current = talks_by_year[talk_year] | default: "" %}
@@ -19,12 +25,6 @@ author_profile: true
 {% endfor %}
 </ul>
 <pre>{{ talks_by_year | inspect }}</pre>
-
-<ul>
-  {% for pair in talks_by_year %}
-    <li><strong>{{ pair[0] }}:</strong> {{ pair[1] }}</li>
-  {% endfor %}
-</ul>
 
 {% for year in talks_by_year %}
 
