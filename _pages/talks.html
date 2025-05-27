@@ -18,7 +18,7 @@ author_profile: true
     { talk_year: current | append: talk.path | append: "," } %}
 {% endfor %}
 </ul>
-
+<pre>{{ talks_by_year | inspect }}</pre>
 
 <ul>
   {% for pair in talks_by_year %}
