@@ -15,6 +15,12 @@ author_profile: true
   {% assign talks_by_year = talks_by_year | merge: { talk_year: existing | append: talk.path | append: "," } %}
 {% endfor %}
 
+<ul>
+  {% for pair in talks_by_year %}
+    <li><strong>{{ pair[0] }}:</strong> {{ pair[1] }}</li>
+  {% endfor %}
+</ul>
+
 {% for year in talks_by_year %}
 
   <li class="masthead__menu-item masthead__menu-item--dropdown">
