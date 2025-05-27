@@ -14,7 +14,7 @@
 .talks__menu-item summary {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   list-style: none;
   padding: 0.5rem 0;
 }
@@ -31,4 +31,14 @@
 
 .talks__menu-item[open] summary::after {
   transform: rotate(90deg);
+}
+
+.talks__menu-item ul {
+  margin: 0;
+  padding-left: 1rem; /* Optional: indent the list slightly */
+}
+
+.talks__menu-item li {
+  margin: 0.25rem 0; /* Optional: reduce spacing between individual talks */
+  list-style-type: disc; /* Or 'none' to remove bullets entirely */
 }
