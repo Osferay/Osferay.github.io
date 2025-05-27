@@ -19,8 +19,8 @@ author_profile: true
 
 {% for year in year_list %}
   {% if year != "" %}
-    <li class="masthead__menu-item masthead__menu-item--talks">
-    <h2 >{{ year }} </h2>
+    <details  class="talks__menu-item">
+    <summary >{{ year }} </summary>
       <ul class="dropdown-menu">
         {% for post in sorted_talks %}
           {% assign talk_year = post.date_start | date: "%Y" %}
@@ -29,6 +29,6 @@ author_profile: true
           {% endif %}
         {% endfor %}
       </ul>
-    </li>
+    </details >
   {% endif %}
 {% endfor %}
