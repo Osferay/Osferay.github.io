@@ -5,12 +5,30 @@ permalink: /events/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% assign sorted_talks = site.talks | sort: "date_start" | reverse %}
+{% assign years = "" %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+{% for talk in sorted_talks %}
+  {% assign year = talk.date_start | date: "%Y" %}
+  {% unless years contains year %}
+    {% assign years = years | append: year | append: "," %}
+  {% endunless %}
+{% endfor %}
 
-{% endif %}
+{% assign year_list = years | split: "," %}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+{% for year in year_list %}
+  {% if year != "" %}
+    <details  class="talks__menu-item">
+    <summary style="font-size: 1.5rem;">{{ year }} </summary>
+      <ul class="dropdown-menu">
+        {% for post in sorted_talks %}
+          {% assign talk_year = post.date_start | date: "%Y" %}
+          {% if talk_year == year %}
+              {% include archive-single-talk.html %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </details >
+  {% endif %}
 {% endfor %}
