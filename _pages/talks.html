@@ -20,7 +20,7 @@ author_profile: true
 {% for year in year_list %}
   {% if year != "" %}
     <details  class="talks__menu-item">
-    <summary >{{ year }} </summary>
+    <summary style="font-size: 1.5rem;">{{ year }} </summary>
       <ul class="dropdown-menu">
         {% for post in sorted_talks %}
           {% assign talk_year = post.date_start | date: "%Y" %}
