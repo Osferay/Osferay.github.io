@@ -20,7 +20,13 @@ author_profile: true
   <li class="masthead__menu-item masthead__menu-item--dropdown">
   <h2 >{{ year[0] }} </h2>
     <ul class="dropdown-menu">
-    {% include archive-single-talk.html talk=post %}
+    {% assign paths = year[1] | split: "," %}
+    {% for path in paths %}
+      {% if path != "" %}
+        {% assign post = site.talks | where: "path", path | first %}
+        {% include archive-single-talk.html %}
+      {% endif %}
+    {% endfor %}
     </ul>
   </li>
 {% endfor %}
