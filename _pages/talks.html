@@ -12,9 +12,13 @@ author_profile: true
   {% assign talk_year = post.date_start | date: "%Y" %}
   
   {% if talk_year != current_year %}
-  <h2>{{ talk_year }}</h2>
   {% assign current_year = talk_year %}
   {% endif %}
 
+<li class="masthead__menu-item masthead__menu-item--dropdown">
+<h2 >{{ talk_year }} </h2>
+  <ul class="dropdown-menu">
   {% include archive-single-talk.html %}
+  </ul>
+</li>
 {% endfor %}
