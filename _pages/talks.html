@@ -6,36 +6,29 @@ author_profile: true
 ---
 
 {% assign sorted_talks = site.talks | sort: "date_start" | reverse %}
-{% assign current_year = "" %}
-{% assign talks_by_year = {} %}
-
+{% assign years = "" %}
 
 {% for talk in sorted_talks %}
-  {% assign talk_year = talk.date_start | date: "%Y" %}
-  {% assign current = talks_by_year[talk_year] | default: "" %}
-  {% assign talks_by_year = talks_by_year | merge: 
-    { talk_year: current | append: talk.path | append: "," } %}
+  {% assign year = talk.date_start | date: "%Y" %}
+  {% unless years contains year %}
+    {% assign years = years | append: year | append: "," %}
+  {% endunless %}
 {% endfor %}
 
+{% assign year_list = years | split: "," %}
 
-<pre>
-{% for year in talks_by_year %}
-  {{ year[0] }}: {{ year[1] }}
-{% endfor %}
-</pre>
-
-{% for year in talks_by_year %}
-
-  <li class="masthead__menu-item masthead__menu-item--dropdown">
-  <h2 >{{ year[0] }} </h2>
-    <ul class="dropdown-menu">
-    {% assign paths = year[1] | split: "," %}
-    {% for path in paths %}
-      {% if path != "" %}
-        {% assign post = site.talks | where: "path", path | first %}
-        {% include archive-single-talk.html %}
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </li>
+{% for year in year_list %}
+  {% if year != "" %}
+    <li class="masthead__menu-item masthead__menu-item--dropdown">
+    <h2 >{{ year }} </h2>
+      <ul class="dropdown-menu">
+        {% for post in sorted_talks %}
+          {% assign talk_year = post.date_start | date: "%Y" %}
+          {% if talk_year == year %}
+              {% include archive-single-talk.html %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  {% endif %}
 {% endfor %}
