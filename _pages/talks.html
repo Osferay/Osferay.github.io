@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 {% assign sorted_talks = site.talks | sort: "date_start" | reverse %}
+{% for talk in sorted_talks %}
+    <li>{{ talk.title }} — {{ talk.date_start }}</li>
+{% endfor %}
 {% assign current_year = "" %}
 {% assign talks_by_year = {} %}
 
