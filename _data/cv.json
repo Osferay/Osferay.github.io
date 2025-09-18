@@ -123,11 +123,13 @@
   "awards" : [
     {
       "name": "Excellence Award for Young Contributors",
-      "date": "2025-07-05"
+      "date": "2025-07-05",
+      "institution": "GAP Council"
     },
     {
       "name": "Oberwolfach Leibniz Graduate Students",
-      "date": "2025-07-05"
+      "date": "2025-07-05",
+      "institution": "Mathematisches Forschungsinstitut Oberwolfach"
     }
   ]
 }

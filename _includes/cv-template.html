@@ -148,6 +148,9 @@
           <div class="cv-item-title">{{ award.name }}</div>
           <div class="cv-item-date">{{ award.date | slice: 0, 4 }}</div>
         </div>
+        <div class="cv-item-content">
+          <div class="cv-item-detail">{{ award.institution }}</div>
+        </div>
       </li>
       {% endfor %}
     </ul>
