@@ -124,10 +124,10 @@
           <div class="cv-item-date">{{ event.startDate | slice: 0, 4 }}</div>
         </div>
         <div class="cv-item-content">
-          {% if talk.location %}
+          {% if event.location %}
           <div class="cv-item-detail">{{ event.location }}</div>
           {% endif %}
-          {% if talk.description %}
+          {% if event.description %}
           <div class="cv-item-detail">{{ event.description }}</div>
           {% endif %}
         </div>
