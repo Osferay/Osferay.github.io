@@ -1,0 +1,13 @@
+---
+layout: archive
+permalink: /research/software/autf2
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.software reversed %}
+  {% if post.title == "AutF2" %}
+    {% include archive-single-software.html %}
+  {% endif %}
+{% endfor %}
