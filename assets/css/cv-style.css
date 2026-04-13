@@ -1,3 +1,6 @@
+.page__title {
+  display: none;
+}
 /* CV Template Styles */
 .cv-container {
   max-width: 1000px;
@@ -16,7 +19,7 @@
 
 .cv-header h1 {
   margin-bottom: 0.5rem;
-  color: #2a7ae2;
+  color: #000000;
 }
 
 .cv-contact-info {
@@ -73,6 +76,12 @@
 }
 
 /* Item Styles */
+.cv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .cv-item {
   margin-bottom: 1.5rem;
 }
@@ -80,7 +89,11 @@
 .cv-item-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+.cv-item-content {
+  margin-top: 0.2rem; /* controlled spacing */
 }
 
 .cv-item-title {

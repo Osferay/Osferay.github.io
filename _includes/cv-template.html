@@ -35,6 +35,35 @@
   </div>
   {% endif %}
   
+  {% if cv.publications.size > 0 %}
+  <!-- Publications -->
+  <div class="cv-section">
+    <h2>Publications</h2>
+    <ul class="cv-list">
+      {% for publication in cv.publications %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ publication.name }}</div>
+          <div class="cv-item-date">{{ publication.releaseDate | slice: 0, 4 }}</div>
+        </div>
+        <div class="cv-item-content">
+          {% if publication.coauthor %}
+          <div class="cv-item-detail">With {{ publication.coauthor }}</div>
+          {% endif %}
+          {% if publication.website %}
+          <div class="cv-item-subtitle">
+            <a href="{{ publication.website }}" target="_blank">{{ publication.publisher }}</a>
+          </div>
+          {% else %}
+            <div class="cv-item-subtitle">{{ publication.publisher }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   {% if cv.education.size > 0 %}
   <!-- Education -->
   <div class="cv-section">
@@ -81,34 +110,6 @@
       </div>
       {% endfor %}
     </div>
-  </div>
-  {% endif %}
-  
-  {% if cv.publications.size > 0 %}
-  <!-- Publications -->
-  <div class="cv-section">
-    <h2>Publications</h2>
-    <ul class="cv-list">
-      {% for publication in cv.publications %}
-      <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ publication.name }}</div>
-          <div class="cv-item-date">{{ publication.releaseDate | slice: 0, 4 }}</div>
-        </div>
-        <div class="cv-item-content">
-          {% if publication.coauthor %}
-          <div class="cv-item-detail">With {{ publication.coauthor }}</div>
-          {% endif %}
-          <div class="cv-item-subtitle">{{ publication.publisher }}</div>
-          {% if publication.website %}
-          <div class="cv-item-detail">
-            <a href="{{ publication.website }}" target="_blank">DOI</a>
-          </div>
-          {% endif %}
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
   </div>
   {% endif %}
   
@@ -237,7 +238,12 @@
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ work.position }}</div>
-          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} - {{ work.endDate }}{% endif %}</div>
+          <div class="cv-item-date">
+            {{ work.startDate | date: "%m.%Y" }}
+            {% if work.endDate %}
+            - {{ work.endDate | date: "%m.%Y" }}
+            {% endif %}
+          </div>
         </div>
         <div class="cv-item-content">
           <div class="cv-item-subtitle">{{ work.company }}</div>
