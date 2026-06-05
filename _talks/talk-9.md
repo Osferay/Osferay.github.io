@@ -7,4 +7,5 @@ venue: "Technische Universität Dresden."
 date_start: 2026-06-19
 date_end: 2026-06-20
 rol: "Contributed speaker."
+slides: "AutF2Beamer.pdf"
 ---
