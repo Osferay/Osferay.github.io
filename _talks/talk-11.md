@@ -1,9 +1,9 @@
 ---
-title: "GAP Days Fall 2026"
+title: "Characters and Blocks in València"
 collection: talks
 type: "Talk"
-link: https://www.gapdays.de/gapdays2026-fall/
-venue: "RWTH Aachen."
-date_start: 2026-09-28
-date_end: 2026-09-02
+link: https://sites.google.com/view/charactersandblocksinvalencia/home?authuser=0
+venue: "Universitat de València."
+date_start: 2026-09-02
+date_end: 2026-09-04
 ---
