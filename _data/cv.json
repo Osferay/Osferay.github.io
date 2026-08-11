@@ -31,7 +31,7 @@
   },
   "education": [
     {
-      "institution": "Technische Universität Braunschweig",
+      "institution": "Technische Universität Braunschweig, Braunschweig, Germany",
       "area": "Promotion in Mathematik",
       "studyType": "",
       "startDate": "2024",
@@ -40,7 +40,7 @@
       "courses": []
     },
     {
-      "institution": "Euskal Herriko Unibertsitatea",
+      "institution": "Euskal Herriko Unibertsitatea, Bilbao, Spain",
       "area": "Máster en Modelización e Investigación Matemática, Estadística y Computación",
       "studyType": "",
       "startDate": "",
@@ -49,7 +49,7 @@
       "courses": []
     },
     {
-      "institution": "Universidad de Alicante",
+      "institution": "Universidad de Alicante, Alicante, Spain",
       "area": "Grado en Matemáticas",
       "studyType": "",
       "startDate": "",
@@ -111,11 +111,29 @@
       "endDate": "2021-09-31"
     }
   ],
+  "talks": [
+    {
+      "name": "On the conjugacy problem in Aut(F2) and related problems.",
+      "startDate": "2026-07",
+      "location": "Groups and topological Groups, Technische Universität Dresden."
+    },
+    {
+      "name": "Computing the breadths of algebras and T-groups.",
+      "startDate": "2025-07",
+      "location": "Computational Group Theory, Mathematisches Forschungsinstitut Oberwolfach."
+    }
+  ],
   "organization": [
     {
       "name": "Norddeutsches Gruppentheorie-Kolloquium.",
       "startDate": "2025-07-04",
       "endDate": "2025-07-05",
+      "location": "Technische Universität Braunschweig."
+    },
+    {
+      "name": "Local algebra seminar.",
+      "startDate": "2025",
+      "endDate": "2027",
       "location": "Technische Universität Braunschweig."
     }
   ],
