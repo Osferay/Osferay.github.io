@@ -15,7 +15,8 @@ main:
         url: /research/software/
       - title: "Publications"
         url: /research/publications/
-
+      - title: "Misc"
+        url: /research/misc/
   - title: "Events"
     url: /events/    
 

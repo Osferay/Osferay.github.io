@@ -50,7 +50,8 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A3AC3E483A1945C">2.4-1 IntersectionSubgroupsNilGroups</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E4B2AF97BF702BC">2.4-2 ProductDecomposition</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86DB02717D7A1877">2.4-2 SubgroupProductPair</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E4B2AF97BF702BC">2.4-3 ProductDecomposition</a></span>
 </div></div>
 </div>
 
@@ -60,9 +61,9 @@
 
 <h4>2.1 <span class="Heading">Canonical conjugate representatives for elements</span></h4>
 
-<p>Suppose that the finitely generated group <span class="Math">G</span> is given by a nilpotent sequence <span class="Math">(g_1,\dots,g_n)</span>. For <span class="Math">g \in G </span> and <span class="Math">U \leq G</span>, we denote the conjugacy class of <span class="Math">g</span> under <span class="Math">U</span> by <span class="Math">g^U = {g^h | h \in U}</span> and the centralizer of <span class="Math">g</span> in <span class="Math">U</span> by <span class="Math">C_U (g) = \{h \in U | g^h = g\}</span>.</p>
+<p>Suppose that the finitely generated group <span class="Math">G</span> is given by a nilpotent sequence <span class="Math">(g_1,\dots,g_n)</span>. For <span class="Math">g \in G</span> and <span class="Math">U \leq G</span>, we denote the conjugacy class of <span class="Math">g</span> under <span class="Math">U</span> by <span class="Math">g^U = \{g^h \mid h \in U\}</span> and the centralizer of <span class="Math">g</span> in <span class="Math">U</span> by <span class="Math">C_U(g) = \{h \in U \mid g^h = g\}</span>.</p>
 
-<p>Let <span class="Math">\ll</span> be the well-order <span class="Math">0 \ll 1 \ll 2 \ll \dots \ll −1 \ll −2 \dots </span> of <span class="Math">\mathbb{Z}</span>. We order the exponent vectors extending the well-order lexicographically; that is, <span class="Math">(e_1,\dots, e_n) \ll (f_1, \dots, f_n)</span> if <span class="Math"> e_1 = f_1, \dots , e_{i−1} = f_{i−1}</span> and <span class="Math">e_i \ll f_i</span> for some <span class="Math">i \in {1,\dots,n} </span>. We order the elements of G via their exponent vectors; that is, <span class="Math">g \ll h</span> if <span class="Math">e(g) \leq e(h)</span>. One of the main program of this package is to compute the minimum element in <span class="Math"> g^U </span> with respect to <span class="Math">\ll</span> this element is known as the canonical conjugacy representative of <span class="Math"> g</span>, this element is denoted as <span class="Math">Cano_U(g)</span>. This program also computes the centralizer <span class="Math"> C_U(g)</span>. This package is supplementary to the article of Eick and Fernández Ayala <a href="chapBib.html#biBcano">[EFA25]</a>.</p>
+<p>Let <span class="Math">\ll</span> be the well-order <span class="Math">0 \ll 1 \ll 2 \ll \dots \ll −1 \ll −2 \dots</span> of <span class="Math">\mathbb{Z}</span>. We extend the well-order to exponent vectors lexicographically; that is, <span class="Math">(e_1,\dots, e_n) \ll (f_1, \dots, f_n)</span> if <span class="Math">e_1 = f_1, \dots , e_{i−1} = f_{i−1}</span> and <span class="Math">e_i \ll f_i</span> for some <span class="Math">i \in {1,\dots,n} </span>. We order the elements of <span class="Math">G</span> via their exponent vectors; that is, <span class="Math">g \ll h</span> if <span class="Math">e(g) \leq e(h)</span>. One of the main programs of this package is to compute the minimum element in <span class="Math">g^U </span> with respect to <span class="Math">\ll</span>; this element is known as the canonical conjugacy representative of <span class="Math">g</span>, which is denoted as <span class="Math">\mathrm{Cano}_U(g)</span>. This program also computes the centralizer <span class="Math">C_U(g)</span>. This package is supplementary to the article of Eick and Fernández Ayala <a href="chapBib.html#biBcano">[EF25]</a>.</p>
 
 <p><a id="X8560A87D8128FC76" name="X8560A87D8128FC76"></a></p>
 
@@ -103,7 +104,7 @@
 
 <h4>2.2 <span class="Heading">Canonical conjugate representatives for subgroups</span></h4>
 
-<p>Suppose that the finitely generated group <span class="Math">G</span> is given by a nilpotent sequence <span class="Math">(g_1,\dots,g_n)</span>. Given <span class="Math">U, V \leq G</span> we write <span class="Math">U^V = \{U^g | g ∈ V \}</span> for the conjugacy class of <span class="Math">U</span> under <span class="Math">V</span> and <span class="Math">N_V(U) = \{g \in V | U^g = U\}</span> for the corresponding normalizer. Let <span class="Math">U \leq G</span> be given by its basis <span class="Math">(u_1,\dots, u_n)</span>. Let <span class="Math">N \leq N_G(U)</span> and <span class="Math">g \in N</span>. We define <span class="Math">Cano_N^U(g)</span> as the unique reduced preimage of <span class="Math">Cano_{N/U}(gU)</span> under the natural homomorphism <span class="Math">N \rightarrow N/U</span>. Now we consider two subgroups <span class="Math">W</span> and <span class="Math">V</span> of <span class="Math">G</span>, and write <span class="Math">W_i = W \cap G_i </span> for <span class="Math">1 \leq i \leq n</span>. We define <span class="Math">Cano_V (W )</span> inductively: suppose that <span class="Math">U_{i+1} = Cano_V (W_i+1)</span> is given by a basis <span class="Math">u_{i+1},\dots, u_n</span> together with a conjugating element <span class="Math">U_i+1 = W^v_{i+1}</span> and its normalizer <span class="Math">N = N_V (U_{i+1})</span>. Suppose that <span class="Math">W_i \neq W_{i+1}</span> and <span class="Math">W_i = ⟨w_i, W_{i+1}⟩ </span>. Let <span class="Math">w_i^\prime</span> be the normalized power of the conjugate <span class="Math">w^v_i</span>. Set <span class="Math">u_i = Cano^{U_{i+1}}_N(w^\prime_i)</span>, then <span class="Math">(u_i,\dots, u_n)</span> is a basis for a subgroup <span class="Math">U_i</span> of <span class="Math">G_i</span>. We write <span class="Math">Cano_V (W )</span> for the subgroup <span class="Math">U_1</span> eventually determined by an iterated process. One of the main program of this package is to compute <span class="Math">Cano_V (W )</span>. This program also computes the normalizer of <span class="Math"> N_V(W) </span>.</p>
+<p>Suppose that the finitely generated group <span class="Math">G</span> is given by a nilpotent sequence <span class="Math">(g_1,\dots,g_n)</span>. Given <span class="Math">U, V \leq G</span> we write <span class="Math">U^V = \{U^g \mid g ∈ V \}</span> for the conjugacy class of <span class="Math">U</span> under <span class="Math">V</span> and <span class="Math">N_V(U) = \{g \in V \mid U^g = U\}</span> for the corresponding normalizer. Let <span class="Math">U \leq G</span> be given by its basis <span class="Math">(u_1,\dots, u_n)</span>. Let <span class="Math">N \leq N_G(U)</span> and <span class="Math">g \in N</span>. We define <span class="Math">\mathrm{Cano}_N^U(g)</span> as the unique reduced preimage of <span class="Math">\mathrm{Cano}_{N/U}(gU)</span> under the natural homomorphism <span class="Math">N \rightarrow N/U</span>. Now we consider two subgroups <span class="Math">W</span> and <span class="Math">V</span> of <span class="Math">G</span>, and write <span class="Math">W_i = W \cap G_i </span> for <span class="Math">1 \leq i \leq n</span>. We define <span class="Math">\mathrm{Cano}_V (W )</span> inductively: suppose that <span class="Math">U_{i+1} = \mathrm{Cano}_V (W_i+1)</span> is given by a basis <span class="Math">u_{i+1},\dots, u_n</span> together with a conjugating element <span class="Math">U_i+1 = W^v_{i+1}</span> and its normalizer <span class="Math">N = N_V (U_{i+1})</span>. Suppose that <span class="Math">W_i &lt; W_{i+1}</span> and <span class="Math">W_i = \langle w_i, W_{i+1}\rangle </span>. Let <span class="Math">w_i^\prime</span> be the normalized power of the conjugate <span class="Math">w^v_i</span>. Set <span class="Math">u_i = \mathrm{Cano}^{U_{i+1}}_N(w^\prime_i)</span>, then <span class="Math">(u_i,\dots, u_n)</span> is a basis for a subgroup <span class="Math">U_i</span> of <span class="Math">G_i</span>. We write <span class="Math">\mathrm{Cano}_V (W )</span> for the subgroup <span class="Math">U_1</span> eventually determined by an iterated process. One of the main programs of this package is to compute <span class="Math">\mathrm{Cano}_V (W )</span>. This program also computes the normalizer of <span class="Math"> N_V(W) </span>.</p>
 
 <p><a id="X79D4DFBD7BA10E08" name="X79D4DFBD7BA10E08"></a></p>
 
@@ -149,20 +150,20 @@
 <h5>2.3-1 CanonicalConjugateList</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CanonicalConjugateList</code>( <var class="Arg">G</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Given a list of elements of a nilpotent group <span class="Math">G</span> returns a list of canonical representative conjugates of the list and the position of the elements that belong to the given canonical conjugacy class.</p>
+<p>Given a list of elements of a nilpotent group <span class="Math">G</span>, returns a list of canonical conjugacy representatives of the list and the positions of the elements that belong to the given canonical conjugacy class.</p>
 
 <p><a id="X857133227E86DE21" name="X857133227E86DE21"></a></p>
 
 <h5>2.3-2 IsConjugateList</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsConjugateList</code>( <var class="Arg">G</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Given a list of elements of a nilpotent group <span class="Math">G</span> returns a list of representative conjugates of the list and the position of the elements that belong to the given conjugacy class.</p>
+<p>Given a list of elements of a nilpotent group <span class="Math">G</span>, returns a list of conjugacy representatives of the list and the positions of the elements that belong to the given conjugacy class.</p>
 
 <p><a id="X831211067FE8CECF" name="X831211067FE8CECF"></a></p>
 
 <h4>2.4 <span class="Heading">Intersection of subgroups and product pairs of subgroups</span></h4>
 
-<p>This algorithms are based on Eddie's work <a href="chapBib.html#biBEddie">[Lo98]</a>.</p>
+<p>These algorithms are based on Eddie's work <a href="chapBib.html#biBEddie">[Lo98]</a>.</p>
 
 <p><a id="X7A3AC3E483A1945C" name="X7A3AC3E483A1945C"></a></p>
 
@@ -171,12 +172,19 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IntersectionSubgroupsNilGroups</code>( <var class="Arg">G</var>, <var class="Arg">U</var>, <var class="Arg">V</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Given two subgroups <span class="Math">U,V</span> of a nilpotent group <span class="Math">G</span> computes the intersection of both subgroups.</p>
 
+<p><a id="X86DB02717D7A1877" name="X86DB02717D7A1877"></a></p>
+
+<h5>2.4-2 SubgroupProductPair</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SubgroupProductPair</code>( <var class="Arg">G</var>, <var class="Arg">U</var>, <var class="Arg">V</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Given two subgroups <span class="Math">U,V</span> of a nilpotent group <span class="Math">G</span>, computes the subgroup product pair of both subgroups.</p>
+
 <p><a id="X7E4B2AF97BF702BC" name="X7E4B2AF97BF702BC"></a></p>
 
-<h5>2.4-2 ProductDecomposition</h5>
+<h5>2.4-3 ProductDecomposition</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ProductDecomposition</code>( <var class="Arg">G</var>, <var class="Arg">U</var>, <var class="Arg">V</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Given two subgroups <span class="Math">U,V</span> of a nilpotent group <span class="Math">G</span> computes the subgroup product pair of both subgroups. Given two subgroups <span class="Math">U,V</span> of a nilpotent group <span class="Math">G</span> and an element <span class="Math">g</span> in <span class="Math">G</span> computes the decompostion of <span class="Math">g</span> under the product pair of both subgroups.</p>
+<p>Given two subgroups <span class="Math">U,V</span> of a nilpotent group <span class="Math">G</span> and an element <span class="Math">g</span> in <span class="Math">G</span> computes the decomposition of <span class="Math">g</span> with respect to the product pair of the two subgroups.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
