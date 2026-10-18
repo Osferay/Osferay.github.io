@@ -1,6 +1,6 @@
 ---
 title: "A family of finite balanced p-groups with unbounded nilpotency class."
-collection: misc
+collection: miscellaneous
 category: manuscripts
 excerpt: 'For every prime p we construct a family of balanced finite two-generator p-groups whose nilpotency class is arbitrarily large. This gives an affirmative answer to Problem 17.113 in the Kourovka Notebook.'
 date: October 2026
