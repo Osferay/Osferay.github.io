@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 I am a PhD student at the Technische Universität Braunschweig, under the supervision of [Prof. Dr. Bettina Eick](https://www.iaa.tu-bs.de/beick/).
+I will complete my PhD in January 2027.
 My research is funded by the DFG project [The conjugacy problem and groups of automorphisms](https://gepris.dfg.de/gepris/projekt/535115960). 
 The project focuses on developing practical algorithms for solving the conjugacy problem in polycyclic groups and in the automorphism group of the free group of rank 2.
 
